@@ -8,19 +8,19 @@ terraform {
 
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "4.25.0"
+      version = "4.28.0"
     }
 
     aws = {
       source  = "hashicorp/aws"
-      version = "5.21.0"
+      version = "5.43.0"
     }
   }
 
   backend "s3" {
-    bucket     = "nicholasmeyers-bank-bff-prd-terraform-state"
-    key        = "terraform.tfstate"
-    region     = "eu-west-1"
+    bucket = "nicholasmeyers-api-skoda-prd-terraform-state"
+    key    = "terraform.tfstate"
+    region = "eu-west-1"
   }
 }
 

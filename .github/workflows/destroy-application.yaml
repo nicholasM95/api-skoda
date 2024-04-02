@@ -31,7 +31,6 @@ jobs:
           url: ${{ env.VAULT_ADDR }}
           role: github-actions-secret
           method: jwt
-          jwtGithubAudience: test-aud
           path: github-actions-secret
           secrets: |
             github-actions-secret/data/secret CLOUDFLARE_API_KEY | CLOUDFLARE_API_KEY ;    

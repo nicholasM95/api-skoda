@@ -19,7 +19,7 @@
 
     <properties>
         <java.version>21</java.version>
-        <feign.version>11.9.1</feign.version>
+        <feign.version>11.10</feign.version>
     </properties>
 
     <dependencies>

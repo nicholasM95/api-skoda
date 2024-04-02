@@ -18,9 +18,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket     = "nicholasmeyers-api-skoda-prd-terraform-state"
-    key        = "terraform.tfstate"
-    region     = "eu-west-1"
+    bucket = "nicholasmeyers-api-skoda-prd-terraform-state"
+    key    = "terraform.tfstate"
+    region = "eu-west-1"
   }
 }
 

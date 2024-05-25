@@ -11,7 +11,7 @@ module "vault" {
   vault_path = "api-skoda"
   data_json = jsonencode(
     {
-      SENTRY_DSN     = var.sentry_dsn,
+      SENTRY_DSN = var.sentry_dsn,
     }
   )
 }

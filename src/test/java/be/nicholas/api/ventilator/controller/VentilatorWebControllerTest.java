@@ -93,7 +93,11 @@ public class VentilatorWebControllerTest {
         Mockito.when(client.stopVentilator(eq(uri), eq("QMGAG8BEQSY003476"), ventilatorRequestResourceArgumentCaptor.capture())).thenReturn(ventilatorResponseResource);
 
         String request = """
-                {}""";
+                {
+                    "duration": 0,
+                    "pin": "1111"
+                }""";
+
         String response = """
                 {"id":"123","vin":"QMGAG8BEQSY003476"}""";
 

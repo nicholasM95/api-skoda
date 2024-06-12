@@ -22,8 +22,3 @@ variable "image_tag" {
   description = "Image tag"
   type        = string
 }
-
-variable "sentry_dsn" {
-  description = "Sentry dsn"
-  type        = string
-}

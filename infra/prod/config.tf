@@ -11,16 +11,6 @@ terraform {
       version = "4.35.0"
     }
 
-    random = {
-      source  = "hashicorp/random"
-      version = "3.6.2"
-    }
-
-    vault = {
-      source  = "hashicorp/vault"
-      version = "4.2.0"
-    }
-
     aws = {
       source  = "hashicorp/aws"
       version = "5.53.0"
@@ -38,10 +28,4 @@ provider "helm" {
   kubernetes {
     config_path = "~/.kube/config"
   }
-}
-
-provider "vault" {
-}
-
-provider "random" {
 }

@@ -13,11 +13,6 @@ variable "host_name" {
   type        = string
 }
 
-variable "vault_uri" {
-  description = "Vault uri"
-  type        = string
-}
-
 variable "image_tag" {
   description = "Image tag"
   type        = string

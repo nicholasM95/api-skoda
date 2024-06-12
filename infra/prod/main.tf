@@ -1,9 +1,3 @@
-resource "random_uuid" "vault_role_id" {
-}
-
-resource "random_uuid" "vault_secret_id" {
-}
-
 module "dns" {
   source    = "git::https://github.com/nicholasM95/terraform-modules.git//modules/dns-cloudflare?ref=v1.1.6"
   ip        = var.server_ip

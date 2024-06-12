@@ -76,10 +76,10 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -var image_tag=${{ github.event.inputs.image_tag }} -var server_ip=$PUBLIC_IP -var docker_config=$DOCKER_CONFIG -var host_name="nicholasmeyers.be" -var vault_uri=${{ env.VAULT_ADDR }} -var sentry_dsn=${{ env.SENTRY_DSN }}
+        run: terraform plan -var image_tag=${{ github.event.inputs.image_tag }} -var server_ip=$PUBLIC_IP -var docker_config=$DOCKER_CONFIG -var host_name="nicholasmeyers.be" -var vault_uri=${{ env.VAULT_ADDR }}
         working-directory: infra/prod
 
       - name: Terraform Apply
         id: apply
-        run: terraform apply -var image_tag=${{ github.event.inputs.image_tag }} -var server_ip=$PUBLIC_IP -var docker_config=$DOCKER_CONFIG -var host_name="nicholasmeyers.be" -var vault_uri=${{ env.VAULT_ADDR }} -var sentry_dsn=${{ env.SENTRY_DSN }} -auto-approve
+        run: terraform apply -var image_tag=${{ github.event.inputs.image_tag }} -var server_ip=$PUBLIC_IP -var docker_config=$DOCKER_CONFIG -var host_name="nicholasmeyers.be" -var vault_uri=${{ env.VAULT_ADDR }} -auto-approve
         working-directory: infra/prod

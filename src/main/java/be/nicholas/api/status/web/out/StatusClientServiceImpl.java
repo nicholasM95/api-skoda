@@ -36,7 +36,8 @@ public class StatusClientServiceImpl implements StatusClientService {
 
     private Field getField(FieldResponseResource field) {
         return new Field(field.getId(), field.getTsCarSentUtc(), field.getTsCarSent(), field.getTsTssReceivedUtc(),
-                field.getTsTssReceivedUtc(), field.getMilCarCaptured(), field.getMilCarSent(), field.getValue(), field.getUnit(), field.getTextId());
+                field.getTsTssReceivedUtc(), field.getMilCarCaptured(), field.getMilCarSent(), field.getValue(), field.getUnit(),
+                field.getTextId(), field.getPicId());
     }
 
     private Data getData(DataResponseResource data) {

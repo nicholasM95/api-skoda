@@ -59,7 +59,8 @@ public class StatusWebControllerTest {
                                     "milCarSent":6,
                                     "value":"VAL",
                                     "unit":"UNIT",
-                                    "textId":"text"
+                                    "textId":"text",
+                                    "picId":"pic"
                                 }
                             ]
                         }
@@ -112,6 +113,7 @@ public class StatusWebControllerTest {
         fieldResponseResource.setValue("VAL");
         fieldResponseResource.setUnit("UNIT");
         fieldResponseResource.setTextId("text");
+        fieldResponseResource.setPicId("pic");
         return fieldResponseResource;
     }
 }

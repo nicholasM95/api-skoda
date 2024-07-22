@@ -744,6 +744,7 @@ components:
         - value
         - unit
         - textId
+        - picId
       type: object
       properties:
         id:
@@ -792,6 +793,10 @@ components:
           type: string
           description: textId
           example: interval.oil.distance
+        picId:
+          type: string
+          description: textId
+          example: ICON025_yellow.png
     VehicleWebResponseResource:
       required:
         - id

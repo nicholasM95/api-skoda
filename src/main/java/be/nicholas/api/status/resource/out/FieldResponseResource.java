@@ -13,6 +13,7 @@ public class FieldResponseResource {
     private String value;
     private String unit;
     private String textId;
+    private String picId;
 
     public String getId() {
         return id;
@@ -92,5 +93,13 @@ public class FieldResponseResource {
 
     public void setTextId(String textId) {
         this.textId = textId;
+    }
+
+    public String getPicId() {
+        return picId;
+    }
+
+    public void setPicId(String picId) {
+        this.picId = picId;
     }
 }

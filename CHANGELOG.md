@@ -1,3 +1,37 @@
+# [1.2.0](https://github.com/nicholasM95/api-skoda/compare/v1.1.1...v1.2.0) (2024-07-22)
+
+
+### Features
+
+* add cache for host ([59c0a55](https://github.com/nicholasM95/api-skoda/commit/59c0a559b383af08ae15327e71f347ce6368fe16))
+* add extra resources ([e6c559d](https://github.com/nicholasM95/api-skoda/commit/e6c559dd8576bac48f228bbfa7ca2a94d33b0659))
+* add extra resources ([c7dfaea](https://github.com/nicholasM95/api-skoda/commit/c7dfaea575290b18b006e89c5b0189710b0bc595))
+* add monitoring and logging ([a41234a](https://github.com/nicholasM95/api-skoda/commit/a41234a7ee33274c576a0e7a8d8e0101a1c820d4))
+* add monitoring and logging ([43c5207](https://github.com/nicholasM95/api-skoda/commit/43c52072a86f3d0185aba3d46ce0eb6fbccdd8e6))
+* add monitoring and logging ([796944d](https://github.com/nicholasM95/api-skoda/commit/796944df8963302edbceb1b11dfeb382aec9d64f))
+* add pic id to status ([1fc5286](https://github.com/nicholasM95/api-skoda/commit/1fc52862a625d85aa24eafbc1e20141cf675921e))
+* add time module ([db2e413](https://github.com/nicholasM95/api-skoda/commit/db2e41332abd1d6f8f566acbf8721e27765fbee9))
+* add tracing ([da8407f](https://github.com/nicholasM95/api-skoda/commit/da8407f094bcba6931766f13b32f8aa1ad1215bf))
+* enable CDS ([c51080c](https://github.com/nicholasM95/api-skoda/commit/c51080cbd85350bd0e97302439474bf31a47b276))
+* enable virtual threads ([8c810e7](https://github.com/nicholasM95/api-skoda/commit/8c810e73bb8f80648b230f1f37ab606c9e0e5d0d))
+* honk and flash ([29b30c7](https://github.com/nicholasM95/api-skoda/commit/29b30c79741c51265df76f8936ce2c984178c0d4))
+* remove sentry ([66f69db](https://github.com/nicholasM95/api-skoda/commit/66f69db85f9f75f773c8eb5eebb056101f37eb54))
+* remove sentry ([37517f4](https://github.com/nicholasM95/api-skoda/commit/37517f4d08a1011c16e69a4777d1057e44288514))
+* remove sentry ([cdc4c8f](https://github.com/nicholasM95/api-skoda/commit/cdc4c8fb96cc5f9f8ad7bc73ff117320db471903))
+
+
+### Bug Fixes
+
+* add missing dependency ([2507a47](https://github.com/nicholasM95/api-skoda/commit/2507a47e18886fc150da3c869ce886d4a7c5d16b))
+* add missing request body ([4cab430](https://github.com/nicholasM95/api-skoda/commit/4cab4304e2dcdcd42202da63e2884ab0dfe7ce8f))
+* refactor service ([90a4bbd](https://github.com/nicholasM95/api-skoda/commit/90a4bbd5ed91ad5ada1c4e6d17b185b3f4e361c4))
+* **deps:** update dependency io.sentry:sentry-logback to v7.10.0 ([41de4aa](https://github.com/nicholasM95/api-skoda/commit/41de4aa24e8788dca2ebb04db057ca645d08f045))
+* **deps:** update dependency io.sentry:sentry-spring-boot-starter-jakarta to v7.10.0 ([3145048](https://github.com/nicholasM95/api-skoda/commit/31450485df3a87e4e0f8e6ccce1377ca2f27806a))
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.3.0 ([4cab46b](https://github.com/nicholasM95/api-skoda/commit/4cab46b2222d94341312aa34dfe33975690ddacb))
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.3.2 ([6731f9a](https://github.com/nicholasM95/api-skoda/commit/6731f9a8a2bf1c6b4b6ed7286938778046ff28df))
+* **deps:** update dependency org.springframework.cloud:spring-cloud-dependencies to v2023.0.2 ([4b84d44](https://github.com/nicholasM95/api-skoda/commit/4b84d4477f9152453ed6a2d3e045b81f373f8504))
+* **deps:** update dependency org.springframework.cloud:spring-cloud-dependencies to v2023.0.3 ([922428e](https://github.com/nicholasM95/api-skoda/commit/922428ed38618e8fb62f7bdea7a5cbfa81b4efbc))
+
 ## [1.1.1](https://github.com/nicholasM95/api-skoda/compare/v1.1.0...v1.1.1) (2024-04-23)
 
 

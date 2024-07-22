@@ -56,6 +56,7 @@ public class StatusMapperImpl implements StatusMapper {
                 .value(field.value())
                 .unit(field.unit())
                 .textId(field.textId())
+                .picId(field.picId())
                 .build();
     }
 }

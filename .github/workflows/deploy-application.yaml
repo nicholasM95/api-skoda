@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@1d96c772d19495a3b5c517cd2bc0cb401ea0529f # v4.1.3
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@v4.0.3
         with:
           node-version: 20
 
@@ -41,7 +41,7 @@ jobs:
             github-actions-secret/data/secret CLOUDFLARE_EMAIL | CLOUDFLARE_EMAIL ;  
             github-actions-secret/data/secret K8S_CONFIG | K8S_CONFIG ;
             github-actions-secret/data/secret PUBLIC_IP | PUBLIC_IP ;    
-            github-actions-secret/data/secret DOCKER_CONFIG | DOCKER_CONFIG ;    
+            github-actions-secret/data/secret DOCKER_CONFIG | DOCKER_CONFIG ;
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
@@ -55,7 +55,7 @@ jobs:
           echo $K8S_CONFIG | base64 -d > /home/runner/.kube/config
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@97f030cf6dc0b4f5e0da352c7bca9cca34579800 # v3.1.0
+        uses: hashicorp/setup-terraform@651471c36a6092792c552e8b1bef71e592b462d8 # v3.1.1
 
       - name: Terraform Init
         id: init

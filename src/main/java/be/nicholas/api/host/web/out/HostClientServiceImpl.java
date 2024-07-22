@@ -1,5 +1,6 @@
 package be.nicholas.api.host.web.out;
 
+import be.nicholas.api.cache.HostCache;
 import be.nicholas.api.host.domain.Host;
 import be.nicholas.api.host.resource.out.HostResponseResource;
 import be.nicholas.api.host.service.HostClientService;
@@ -16,27 +17,35 @@ import java.net.URISyntaxException;
 public class HostClientServiceImpl implements HostClientService {
 
     private final HostClient client;
+    private final HostCache cache;
 
     @Override
     public Host findHostByVin(String vin, String mode) {
-        log.info("find host for vin {} and mode {}", vin, mode);
-        HostResponseResource resource = client.getHomeRegion(vin);
-        URI uri;
-        if ("mal".equals(mode)) {
-            try {
-                uri = new URI(resource.getHomeRegion().getBaseUri().getContent()
-                        .replace("/api", "")
-                        .replace("mal", "fal"));
-            } catch (URISyntaxException e) {
-                throw new RuntimeException(e); // TODO throw custom error
-            }
+        if (cache.isCached(vin, mode)) {
+            log.info("get host for vin {} and mode {} from cache", vin, mode);
+            return cache.getHost(vin, mode);
         } else {
-            try {
-                uri = new URI(resource.getHomeRegion().getBaseUri().getContent().replace("/api", ""));
-            } catch (URISyntaxException e) {
-                throw new RuntimeException(e); // TODO throw custom error
+            log.info("find host for vin {} and mode {}", vin, mode);
+            HostResponseResource resource = client.getHomeRegion(vin);
+            URI uri;
+            if ("mal".equals(mode)) {
+                try {
+                    uri = new URI(resource.getHomeRegion().getBaseUri().getContent()
+                            .replace("/api", "")
+                            .replace("mal", "fal"));
+                } catch (URISyntaxException e) {
+                    throw new RuntimeException(e); // TODO throw custom error
+                }
+            } else {
+                try {
+                    uri = new URI(resource.getHomeRegion().getBaseUri().getContent().replace("/api", ""));
+                } catch (URISyntaxException e) {
+                    throw new RuntimeException(e); // TODO throw custom error
+                }
             }
+            Host host = new Host(uri);
+            cache.addHost(vin, mode, host);
+            return host;
         }
-        return new Host(uri);
     }
 }

@@ -23,7 +23,7 @@ public class HostServiceTest {
     private HostClient client;
 
     @Test
-    public void getHotFal() {
+    public void getHostFal() {
         BaseUriResponseResource baseUriResponseResource = new BaseUriResponseResource();
         baseUriResponseResource.setContent("CONTENT");
         baseUriResponseResource.setSystemId("SYSTEM_ID");
@@ -42,7 +42,7 @@ public class HostServiceTest {
     }
 
     @Test
-    public void getHotMal() {
+    public void getHostMal() {
         BaseUriResponseResource baseUriResponseResource = new BaseUriResponseResource();
         baseUriResponseResource.setContent("CONTENT");
         baseUriResponseResource.setSystemId("SYSTEM_ID");
@@ -57,6 +57,13 @@ public class HostServiceTest {
 
         URI result = hostService.getHost("QMGAG8BEQSY003476", "mal");
 
+        Assertions.assertEquals("CONTENT", result.toString());
+    }
+
+    @Test
+    public void getHostMalCacheAvailable() {
+        getHostMal();
+        URI result = hostService.getHost("QMGAG8BEQSY003476", "mal");
         Assertions.assertEquals("CONTENT", result.toString());
     }
 }

@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/nicholasM95/api-skoda/compare/v1.2.0...v1.2.1) (2024-08-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.3.3 ([07a87a9](https://github.com/nicholasM95/api-skoda/commit/07a87a90fef3ecece4ff6cebb31d4e6282041b44))
+
 # [1.2.0](https://github.com/nicholasM95/api-skoda/compare/v1.1.1...v1.2.0) (2024-07-22)
 
 

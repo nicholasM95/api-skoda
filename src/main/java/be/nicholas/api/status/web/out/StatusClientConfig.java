@@ -1,5 +1,6 @@
 package be.nicholas.api.status.web.out;
 
+import be.nicholas.api.core.error.ApiErrorDecoder;
 import be.nicholas.api.core.web.AuthInterceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -17,6 +18,7 @@ public class StatusClientConfig {
         return Feign.builder()
                 .encoder(new JacksonEncoder(objectMapper()))
                 .decoder(new JacksonDecoder(objectMapper()))
+                .errorDecoder(new ApiErrorDecoder())
                 .requestInterceptor(new AuthInterceptor())
                 .target(StatusClient.class, "https://localhost:8080");
     }

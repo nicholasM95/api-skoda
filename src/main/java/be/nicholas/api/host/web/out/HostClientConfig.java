@@ -1,5 +1,6 @@
 package be.nicholas.api.host.web.out;
 
+import be.nicholas.api.core.error.ApiErrorDecoder;
 import be.nicholas.api.core.web.AuthInterceptor;
 import feign.Feign;
 import feign.jackson.JacksonDecoder;
@@ -15,6 +16,7 @@ public class HostClientConfig {
         return Feign.builder()
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
+                .errorDecoder(new ApiErrorDecoder())
                 .requestInterceptor(new AuthInterceptor())
                 .target(HostClient.class, "https://mal-1a.prd.ece.vwg-connect.com");
     }

@@ -1,5 +1,6 @@
 package be.nicholas.api.honk.web.out;
 
+import be.nicholas.api.core.error.ApiErrorDecoder;
 import be.nicholas.api.core.web.AuthInterceptor;
 import feign.Feign;
 import feign.jackson.JacksonDecoder;
@@ -14,6 +15,7 @@ public class HonkClientConfig {
         return Feign.builder()
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
+                .errorDecoder(new ApiErrorDecoder())
                 .requestInterceptor(new AuthInterceptor())
                 .target(HonkClient.class, "https://localhost:8080");
     }

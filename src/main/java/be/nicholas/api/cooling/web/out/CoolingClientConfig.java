@@ -1,5 +1,6 @@
 package be.nicholas.api.cooling.web.out;
 
+import be.nicholas.api.core.error.ApiErrorDecoder;
 import be.nicholas.api.core.web.AuthInterceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -18,6 +19,7 @@ public class CoolingClientConfig {
         return Feign.builder()
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder(createObjectMapper()))
+                .errorDecoder(new ApiErrorDecoder())
                 .requestInterceptor(new AuthInterceptor())
                 .target(CoolingClient.class, "https://localhost:8080");
     }

@@ -3,17 +3,12 @@ terraform {
 
     helm = {
       source  = "hashicorp/helm"
-      version = "2.16.1"
-    }
-
-    cloudflare = {
-      source  = "cloudflare/cloudflare"
-      version = "4.46.0"
+      version = "2.17.0"
     }
 
     aws = {
       source  = "hashicorp/aws"
-      version = "5.77.0"
+      version = "5.82.2"
     }
   }
 

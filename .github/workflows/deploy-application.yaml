@@ -37,10 +37,7 @@ jobs:
           method: jwt
           path: github-actions-secret
           secrets: |
-            github-actions-secret/data/secret CLOUDFLARE_API_KEY | CLOUDFLARE_API_KEY ;    
-            github-actions-secret/data/secret CLOUDFLARE_EMAIL | CLOUDFLARE_EMAIL ;  
             github-actions-secret/data/secret K8S_CONFIG | K8S_CONFIG ;
-            github-actions-secret/data/secret PUBLIC_IP | PUBLIC_IP ;    
             github-actions-secret/data/secret DOCKER_CONFIG | DOCKER_CONFIG ;
 
       - name: Configure AWS credentials
@@ -74,10 +71,10 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -var image_tag=${{ github.event.inputs.image_tag }} -var server_ip=$PUBLIC_IP -var docker_config=$DOCKER_CONFIG -var host_name="nicholasmeyers.be"
+        run: terraform plan -var image_tag=${{ github.event.inputs.image_tag }} -var docker_config=$DOCKER_CONFIG
         working-directory: infra/prod
 
       - name: Terraform Apply
         id: apply
-        run: terraform apply -var image_tag=${{ github.event.inputs.image_tag }} -var server_ip=$PUBLIC_IP -var docker_config=$DOCKER_CONFIG -var host_name="nicholasmeyers.be" -auto-approve
+        run: terraform apply -var image_tag=${{ github.event.inputs.image_tag }} -var docker_config=$DOCKER_CONFIG -auto-approve
         working-directory: infra/prod

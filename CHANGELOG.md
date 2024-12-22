@@ -1,3 +1,11 @@
+## [1.3.3](https://github.com/nicholasM95/api-skoda/compare/v1.3.2...v1.3.3) (2024-12-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.4.1 ([c9c94fa](https://github.com/nicholasM95/api-skoda/commit/c9c94fa4488bb622abf90feb16e1128625d81955))
+* **deps:** update dependency org.springframework.cloud:spring-cloud-dependencies to v2024.0.0 ([484b0d8](https://github.com/nicholasM95/api-skoda/commit/484b0d89e712b79d8d1048a0ac170ce41ddff31e))
+
 ## [1.3.2](https://github.com/nicholasM95/api-skoda/compare/v1.3.1...v1.3.2) (2024-11-26)
 
 ## [1.3.1](https://github.com/nicholasM95/api-skoda/compare/v1.3.0...v1.3.1) (2024-11-26)

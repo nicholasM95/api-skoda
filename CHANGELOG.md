@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/nicholasM95/api-skoda/compare/v1.3.3...v1.4.0) (2025-03-29)
+
+
+### Features
+
+* configure logstash ([5e9b1b5](https://github.com/nicholasM95/api-skoda/commit/5e9b1b51adc15594c8818c59ed52a346a09581c9))
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.swagger.parser.v3:swagger-parser to v2.1.26 ([3119f2b](https://github.com/nicholasM95/api-skoda/commit/3119f2b76b990703bab0f283c74e6b3d3ef62ef7))
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.4.4 ([58c3c89](https://github.com/nicholasM95/api-skoda/commit/58c3c894bd74741600b64507f56361b2386627ef))
+* **deps:** update dependency org.springframework.cloud:spring-cloud-dependencies to v2024.0.1 ([3bba64b](https://github.com/nicholasM95/api-skoda/commit/3bba64b8428389379ce1108e2ac15937146ecbdb))
+
 ## [1.3.3](https://github.com/nicholasM95/api-skoda/compare/v1.3.2...v1.3.3) (2024-12-22)
 
 

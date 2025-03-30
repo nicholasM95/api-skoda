@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/nicholasM95/api-skoda/compare/v1.4.0...v1.5.0) (2025-03-30)
+
+
+### Features
+
+* add apm logging ([6c55e4b](https://github.com/nicholasM95/api-skoda/commit/6c55e4ba2ed1e46276dfa672e868352f04e985b8))
+
 # [1.4.0](https://github.com/nicholasM95/api-skoda/compare/v1.3.3...v1.4.0) (2025-03-29)
 
 

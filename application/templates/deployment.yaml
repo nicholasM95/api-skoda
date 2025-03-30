@@ -50,7 +50,7 @@ spec:
             - name: ELASTIC_APM_SERVER_URL
               value: http://192.168.10.190:8200
             - name: ELASTIC_APM_SERVICE_NAME
-              value: skoda-google-action
+              value: api-skoda
             - name: ELASTIC_APM_ENVIRONMENT
               value: production
           volumeMounts:

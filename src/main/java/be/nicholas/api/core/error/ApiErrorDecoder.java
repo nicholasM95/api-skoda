@@ -18,8 +18,11 @@ public class ApiErrorDecoder implements ErrorDecoder {
     @Override
     public Exception decode(String methodKey, Response response) {
         try {
-            ErrorResponse errorResponse = objectMapper.readValue(response.body().asInputStream(), ErrorResponse.class);
-            return new ApiException(errorResponse.getError().getErrorCode(), errorResponse.getError().getDescription());
+            if (response.body() != null) {
+                ErrorResponse errorResponse = objectMapper.readValue(response.body().asInputStream(), ErrorResponse.class);
+                return new ApiException(errorResponse.getError().getErrorCode(), errorResponse.getError().getDescription());
+            }
+            return new ApiException(response.status() + "", response.headers().toString());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -1,3 +1,12 @@
+## [1.5.1](https://github.com/nicholasM95/api-skoda/compare/v1.5.0...v1.5.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* handle error with empty response body ([d4aa0c8](https://github.com/nicholasM95/api-skoda/commit/d4aa0c8c58e4975d357be7f6fc7bd9fe9450ef48))
+* **deps:** update dependency net.logstash.logback:logstash-logback-encoder to v8.1 ([384fb3e](https://github.com/nicholasM95/api-skoda/commit/384fb3ed00719cf63a7b979582088a9a1398cc78))
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.4.5 ([3174ccf](https://github.com/nicholasM95/api-skoda/commit/3174ccf1a7c4f129563dd35b60705489e6aa9243))
+
 # [1.5.0](https://github.com/nicholasM95/api-skoda/compare/v1.4.0...v1.5.0) (2025-03-30)
 
 

@@ -1,3 +1,12 @@
+## [1.5.2](https://github.com/nicholasM95/api-skoda/compare/v1.5.1...v1.5.2) (2025-06-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.swagger.parser.v3:swagger-parser to v2.1.29 ([bed149d](https://github.com/nicholasM95/api-skoda/commit/bed149daeef581694577f234ab594607fcd7cfe0))
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.5.2 ([cd0fdac](https://github.com/nicholasM95/api-skoda/commit/cd0fdac2fcac120645f1ac24169d0fa0d349382f))
+* **deps:** update dependency org.springframework.cloud:spring-cloud-dependencies to v2025 ([c765db3](https://github.com/nicholasM95/api-skoda/commit/c765db313a01067429db66a5ea631a4337c36a37))
+
 ## [1.5.1](https://github.com/nicholasM95/api-skoda/compare/v1.5.0...v1.5.1) (2025-05-08)
 
 

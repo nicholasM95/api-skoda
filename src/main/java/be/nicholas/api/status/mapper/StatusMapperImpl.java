@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class StatusMapperImpl implements StatusMapper {
@@ -54,9 +55,9 @@ public class StatusMapperImpl implements StatusMapper {
                 .milCarCaptured(field.milCarCaptured())
                 .milCarSent(field.milCarSent())
                 .value(field.value())
-                .unit(field.unit())
+                .unit(Optional.ofNullable(field.unit()).orElse("empty"))
                 .textId(field.textId())
-                .picId(field.picId())
+                .picId(Optional.ofNullable(field.picId()).orElse("empty"))
                 .build();
     }
 }

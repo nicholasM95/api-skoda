@@ -1,3 +1,17 @@
+# [1.6.0](https://github.com/nicholasM95/api-skoda/compare/v1.5.2...v1.6.0) (2025-07-08)
+
+
+### Features
+
+* add ping controller ([b60d0fc](https://github.com/nicholasM95/api-skoda/commit/b60d0fc389de3e345d4e4f5d87a14ea09c98529c))
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.swagger.parser.v3:swagger-parser to v2.1.30 ([2ab89da](https://github.com/nicholasM95/api-skoda/commit/2ab89daebce661621be252df6e2bc5145bf41bc6))
+* **deps:** update dependency io.swagger.parser.v3:swagger-parser to v2.1.31 ([8608b74](https://github.com/nicholasM95/api-skoda/commit/8608b743f3f9001132b9cc3c1b54394540a0f13b))
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.5.3 ([a295a86](https://github.com/nicholasM95/api-skoda/commit/a295a865ee5da627fc6503662951d5d5b3cca5d5))
+
 ## [1.5.2](https://github.com/nicholasM95/api-skoda/compare/v1.5.1...v1.5.2) (2025-06-19)
 
 

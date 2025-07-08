@@ -55,9 +55,9 @@ public class StatusMapperImpl implements StatusMapper {
                 .milCarCaptured(field.milCarCaptured())
                 .milCarSent(field.milCarSent())
                 .value(field.value())
-                .unit(Optional.ofNullable(field.unit()).orElse("empty"))
+                .unit(field.unit())
                 .textId(field.textId())
-                .picId(Optional.ofNullable(field.picId()).orElse("empty"))
+                .picId(field.picId())
                 .build();
     }
 }

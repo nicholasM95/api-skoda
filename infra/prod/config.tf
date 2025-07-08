@@ -3,12 +3,12 @@ terraform {
 
     helm = {
       source  = "hashicorp/helm"
-      version = "3.0.1"
+      version = "3.0.2"
     }
 
     aws = {
       source  = "hashicorp/aws"
-      version = "6.0.0"
+      version = "6.2.0"
     }
   }
 
@@ -20,7 +20,7 @@ terraform {
 }
 
 provider "helm" {
-  kubernetes {
+  kubernetes = {
     config_path = "~/.kube/config"
   }
 }

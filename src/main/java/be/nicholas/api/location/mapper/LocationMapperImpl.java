@@ -11,7 +11,7 @@ public class LocationMapperImpl implements LocationMapper {
         return LocationWebResponseResource.builder()
                 .latitude(location.latitude())
                 .longitude(location.longitude())
-                .parkingTime(location.parkingTime())
+                .address(location.address())
                 .build();
     }
 }

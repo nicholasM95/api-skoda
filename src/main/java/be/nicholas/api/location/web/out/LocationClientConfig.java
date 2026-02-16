@@ -18,6 +18,6 @@ public class LocationClientConfig {
                 .decoder(new JacksonDecoder())
                 .errorDecoder(new ApiErrorDecoder())
                 .requestInterceptor(new AuthInterceptor())
-                .target(LocationClient.class, "https://localhost:8080");
+                .target(LocationClient.class, "https://mysmob.api.connect.skoda-auto.cz");
     }
 }

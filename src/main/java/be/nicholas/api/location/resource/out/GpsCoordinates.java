@@ -1,6 +1,6 @@
 package be.nicholas.api.location.resource.out;
 
-public class PositionResponseResource {
+public class GpsCoordinates {
     private int latitude;
     private int longitude;
 

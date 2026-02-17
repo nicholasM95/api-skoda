@@ -606,15 +606,15 @@ components:
       type: object
       properties:
         latitude:
-          type: integer
-          format: int32
+          type: number
+          format: double
           description: latitude
-          example: 17292954
+          example: 17.292954
         longitude:
-          type: integer
-          format: int32
+          type: number
+          format: double
           description: longitude
-          example: 287205
+          example: 2.87205
         address:
           type: string
           example: Rue Red 16, 1000 Brussels, Belgium

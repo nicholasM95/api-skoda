@@ -33,7 +33,7 @@ public class LocationWebControllerTest {
         Mockito.when(client.findPositionByVin("QMGAG8BEQSY003476")).thenReturn(parkResponseResource);
 
         String response = """
-                {"latitude":123,"longitude":456,"address":"Rue Red 16, 1000 Brussels, Belgium"}""";
+                {"latitude":12.3,"longitude":4.56,"address":"Rue Red 16, 1000 Brussels, Belgium"}""";
 
         mockMvc.perform(get("/location/QMGAG8BEQSY003476")
                 .accept(MediaType.APPLICATION_JSON))
@@ -42,8 +42,8 @@ public class LocationWebControllerTest {
 
     private static ParkResponseResource getParkResponseResource() {
         GpsCoordinates gpsCoordinates = new GpsCoordinates();
-        gpsCoordinates.setLatitude(123);
-        gpsCoordinates.setLongitude(456);
+        gpsCoordinates.setLatitude(12.3);
+        gpsCoordinates.setLongitude(4.56);
 
         ParkingPosition parkingPosition = new ParkingPosition();
         parkingPosition.setGpsCoordinates(gpsCoordinates);

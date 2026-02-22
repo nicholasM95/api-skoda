@@ -20,10 +20,11 @@ public class VehicleClientServiceImpl implements VehicleClientService {
     @Override
     public List<Vehicle> getVehicles() {
         log.info("get vehicles");
-        return client.getVehicles().stream().map(this::getVehicle).collect(Collectors.toList());
+        return client.getVehicles().getVehicles().stream().map(this::getVehicle).collect(Collectors.toList());
     }
 
     private Vehicle getVehicle(VehicleResponseResource response) {
-        return new Vehicle(response.getId(), response.getVin(), response.getSpecification().getTitle(), response.getLastUpdatedAt());
+        return new Vehicle(response.getVin(), response.getName(), response.getLicensePlate(),
+                response.getState(), response.getDevicePlatform(), response.getSystemModelId(), response.getTitle());
     }
 }

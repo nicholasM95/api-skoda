@@ -1,6 +1,5 @@
 package be.nicholas.api.vehicle.domain;
 
-import java.time.LocalDateTime;
-
-public record Vehicle(String id, String vin, String name, LocalDateTime lastUpdated) {
+public record Vehicle(String vin, String name, String licensePlate, String state, String devicePlatform,
+                      String systemModelId, String title) {
 }

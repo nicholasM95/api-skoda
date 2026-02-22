@@ -14,6 +14,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.springframework.test.json.JsonCompareMode.STRICT;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
@@ -37,7 +38,7 @@ public class LocationWebControllerTest {
 
         mockMvc.perform(get("/location/QMGAG8BEQSY003476")
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(content().json(response, true));
+                .andExpect(content().json(response, STRICT));
     }
 
     private static ParkResponseResource getParkResponseResource() {

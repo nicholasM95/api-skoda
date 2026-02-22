@@ -1,9 +1,6 @@
 package be.nicholas.api.vehicle.service;
 
 import be.nicholas.api.vehicle.domain.Vehicle;
-import be.nicholas.api.vehicle.resource.out.VehicleResponseResource;
-import be.nicholas.api.vehicle.web.out.VehicleClient;
-import be.nicholas.api.vehicle.web.out.VehicleClientServiceImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -1,28 +1,14 @@
 package be.nicholas.api.vehicle.resource.out;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Map;
-
 public class VehicleResponseResource {
-    private String id;
+
     private String vin;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private LocalDateTime lastUpdatedAt;
-    private VehicleSpecificationResponseResource specification;
-    private List<VehicleConnectivityResponseResource> connectivities;
-    private List<Map<String, Object>> capabilities;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    private String name;
+    private String licensePlate;
+    private String state;
+    private String devicePlatform;
+    private String systemModelId;
+    private String title;
 
     public String getVin() {
         return vin;
@@ -32,35 +18,51 @@ public class VehicleResponseResource {
         this.vin = vin;
     }
 
-    public LocalDateTime getLastUpdatedAt() {
-        return lastUpdatedAt;
+    public String getName() {
+        return name;
     }
 
-    public void setLastUpdatedAt(LocalDateTime lastUpdatedAt) {
-        this.lastUpdatedAt = lastUpdatedAt;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public VehicleSpecificationResponseResource getSpecification() {
-        return specification;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
-    public void setSpecification(VehicleSpecificationResponseResource specification) {
-        this.specification = specification;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
 
-    public List<VehicleConnectivityResponseResource> getConnectivities() {
-        return connectivities;
+    public String getState() {
+        return state;
     }
 
-    public void setConnectivities(List<VehicleConnectivityResponseResource> connectivities) {
-        this.connectivities = connectivities;
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public List<Map<String, Object>> getCapabilities() {
-        return capabilities;
+    public String getDevicePlatform() {
+        return devicePlatform;
     }
 
-    public void setCapabilities(List<Map<String, Object>> capabilities) {
-        this.capabilities = capabilities;
+    public void setDevicePlatform(String devicePlatform) {
+        this.devicePlatform = devicePlatform;
+    }
+
+    public String getSystemModelId() {
+        return systemModelId;
+    }
+
+    public void setSystemModelId(String systemModelId) {
+        this.systemModelId = systemModelId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

@@ -1,24 +1,20 @@
 package be.nicholas.api.location.controller;
 
-import be.nicholas.api.host.service.HostService;
-import be.nicholas.api.location.resource.out.LocationInfoResponseResource;
-import be.nicholas.api.location.resource.out.LocationResponseResource;
+import be.nicholas.api.location.resource.out.GpsCoordinates;
 import be.nicholas.api.location.resource.out.ParkResponseResource;
-import be.nicholas.api.location.resource.out.PositionResponseResource;
+import be.nicholas.api.location.resource.out.ParkingPosition;
 import be.nicholas.api.location.web.in.LocationWebController;
 import be.nicholas.api.location.web.out.LocationClient;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.net.URI;
-import java.time.LocalDateTime;
-
+import static org.springframework.test.json.JsonCompareMode.STRICT;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
@@ -29,42 +25,34 @@ public class LocationWebControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
+    @MockitoBean
     private LocationClient client;
-
-    @MockBean
-    private HostService hostService;
 
     @Test
     public void getLocation() throws Exception {
-        LocationResponseResource locationResponseResource = getLocationResponseResource();
-
-        URI uri = new URI("https://test.be");
-        Mockito.when(hostService.getHost("QMGAG8BEQSY003476", "mal")).thenReturn(uri);
-        Mockito.when(client.findPositionByVin(uri, "QMGAG8BEQSY003476")).thenReturn(locationResponseResource);
+        ParkResponseResource parkResponseResource = getParkResponseResource();
+        Mockito.when(client.findPositionByVin("QMGAG8BEQSY003476")).thenReturn(parkResponseResource);
 
         String response = """
-                {"latitude":123,"longitude":456,"parkingTime":"2024-10-10T10:10:00"}""";
+                {"latitude":12.3,"longitude":4.56,"address":"Rue Red 16, 1000 Brussels, Belgium"}""";
 
         mockMvc.perform(get("/location/QMGAG8BEQSY003476")
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(content().json(response, true));
+                .andExpect(content().json(response, STRICT));
     }
 
-    private static LocationResponseResource getLocationResponseResource() {
-        PositionResponseResource positionResponseResource = new PositionResponseResource();
-        positionResponseResource.setLatitude(123);
-        positionResponseResource.setLongitude(456);
+    private static ParkResponseResource getParkResponseResource() {
+        GpsCoordinates gpsCoordinates = new GpsCoordinates();
+        gpsCoordinates.setLatitude(12.3);
+        gpsCoordinates.setLongitude(4.56);
 
-        LocationInfoResponseResource locationInfoResponseResource = new LocationInfoResponseResource();
-        locationInfoResponseResource.setCarCoordinate(positionResponseResource);
+        ParkingPosition parkingPosition = new ParkingPosition();
+        parkingPosition.setGpsCoordinates(gpsCoordinates);
+        parkingPosition.setFormattedAddress("Rue Red 16, 1000 Brussels, Belgium");
 
         ParkResponseResource parkResponseResource = new ParkResponseResource();
-        parkResponseResource.setPosition(locationInfoResponseResource);
-        parkResponseResource.setParkingTimeUTC(LocalDateTime.of(2024, 10, 10, 10, 10));
+        parkResponseResource.setParkingPosition(parkingPosition);
 
-        LocationResponseResource locationResponseResource = new LocationResponseResource();
-        locationResponseResource.setFindCarResponse(parkResponseResource);
-        return locationResponseResource;
+        return parkResponseResource;
     }
 }

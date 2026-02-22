@@ -12,10 +12,13 @@ public class VehicleMapperImpl implements VehicleMapper {
     @Override
     public VehicleWebResponseResource toWebResource(final Vehicle vehicle) {
         return VehicleWebResponseResource.builder()
-                .id(vehicle.id())
                 .vin(vehicle.vin())
                 .name(vehicle.name())
-                .lastUpdated(vehicle.lastUpdated())
+                .licensePlate(vehicle.licensePlate())
+                .state(vehicle.state())
+                .devicePlatform(vehicle.devicePlatform())
+                .systemModelId(vehicle.systemModelId())
+                .title(vehicle.title())
                 .build();
     }
 

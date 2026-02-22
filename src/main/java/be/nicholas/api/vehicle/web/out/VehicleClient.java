@@ -1,13 +1,11 @@
 package be.nicholas.api.vehicle.web.out;
 
-import be.nicholas.api.vehicle.resource.out.VehicleResponseResource;
+import be.nicholas.api.vehicle.resource.out.VehicleGarageResponseResource;
 import feign.Headers;
 import feign.RequestLine;
 
-import java.util.List;
-
 public interface VehicleClient {
-    @RequestLine("GET /api/v2/garage/vehicles")
+    @RequestLine("GET /api/v2/garage")
     @Headers({"Content-Type: application/json"})
-    List<VehicleResponseResource> getVehicles();
+    VehicleGarageResponseResource getVehicles();
 }

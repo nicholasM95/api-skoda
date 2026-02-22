@@ -1,16 +1,31 @@
 package be.nicholas.api.status.resource.out;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class StatusResponseResource {
-    @JsonProperty("StoredVehicleDataResponse")
-    private VehicleResponseResource storedVehicleDataResponse;
+    private StatusOverallResponseResource overall;
+    private StatusDetailResponseResource detail;
+    private String carCapturedTimestamp;
 
-    public VehicleResponseResource getStoredVehicleDataResponse() {
-        return storedVehicleDataResponse;
+    public StatusOverallResponseResource getOverall() {
+        return overall;
     }
 
-    public void setStoredVehicleDataResponse(VehicleResponseResource storedVehicleDataResponse) {
-        this.storedVehicleDataResponse = storedVehicleDataResponse;
+    public void setOverall(StatusOverallResponseResource overall) {
+        this.overall = overall;
+    }
+
+    public StatusDetailResponseResource getDetail() {
+        return detail;
+    }
+
+    public void setDetail(StatusDetailResponseResource detail) {
+        this.detail = detail;
+    }
+
+    public String getCarCapturedTimestamp() {
+        return carCapturedTimestamp;
+    }
+
+    public void setCarCapturedTimestamp(String carCapturedTimestamp) {
+        this.carCapturedTimestamp = carCapturedTimestamp;
     }
 }

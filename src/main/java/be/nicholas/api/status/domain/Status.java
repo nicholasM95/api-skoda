@@ -1,6 +1,5 @@
 package be.nicholas.api.status.domain;
 
-import java.util.List;
-
-public record Status(String vin, List<Data> data) {
+public record Status(String doorsLocked, String locked, String doors, String windows, String lights,
+                     String reliableLockStatus, String sunroof, String trunk, String bonnet, String carCapturedTimestamp) {
 }

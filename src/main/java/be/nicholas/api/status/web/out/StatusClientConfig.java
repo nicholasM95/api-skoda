@@ -2,6 +2,7 @@ package be.nicholas.api.status.web.out;
 
 import be.nicholas.api.core.error.ApiErrorDecoder;
 import be.nicholas.api.core.web.AuthInterceptor;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import feign.Feign;
@@ -26,6 +27,7 @@ public class StatusClientConfig {
     private ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return objectMapper;
     }
 }

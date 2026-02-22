@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/nicholasM95/api-skoda/compare/v1.6.0...v2.0.0) (2026-02-22)
+
+
+### Bug Fixes
+
+* read parking location ([c2d2982](https://github.com/nicholasM95/api-skoda/commit/c2d298261c504eef554a71c0955011104aad43e7))
+* **deps:** update dependency io.swagger.parser.v3:swagger-parser to v2.1.37 ([940fddd](https://github.com/nicholasM95/api-skoda/commit/940fddd226ae1916e96a9f49a44ef0769daf6dd3))
+* **deps:** update dependency org.openapitools:jackson-databind-nullable to v0.2.9 ([44eca60](https://github.com/nicholasM95/api-skoda/commit/44eca60250cea6a3e70e9c35e6f7ec1334cff792))
+* **deps:** update dependency org.springframework.boot:spring-boot-starter-parent to v3.5.10 ([2fe5382](https://github.com/nicholasM95/api-skoda/commit/2fe5382a842807edc9bec6c5e3f5c9308479bbed))
+
 # [1.6.0](https://github.com/nicholasM95/api-skoda/compare/v1.5.2...v1.6.0) (2025-07-08)
 
 

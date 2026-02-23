@@ -1,4 +1,4 @@
-package be.nicholas.api.location.web.out;
+package be.nicholas.api.charging.web.out;
 
 import be.nicholas.api.core.error.ApiErrorDecoder;
 import be.nicholas.api.core.web.AuthInterceptor;
@@ -9,15 +9,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class LocationClientConfig {
+public class ChargingClientConfig {
 
     @Bean
-    public LocationClient locationClient() {
+    public ChargingClient chargingClient() {
         return Feign.builder()
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
                 .errorDecoder(new ApiErrorDecoder())
                 .requestInterceptor(new AuthInterceptor())
-                .target(LocationClient.class, "https://mysmob.api.connect.skoda-auto.cz");
+                .target(ChargingClient.class, "https://mysmob.api.connect.skoda-auto.cz");
     }
 }

@@ -1,6 +1,7 @@
 package be.nicholas.api.range.web.out;
 
 import be.nicholas.api.core.error.ApiErrorDecoder;
+import be.nicholas.api.core.web.AuthInterceptor;
 import feign.Feign;
 import feign.jackson.JacksonDecoder;
 import feign.jackson.JacksonEncoder;
@@ -16,6 +17,7 @@ public class RangeClientConfig {
                 .encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder())
                 .errorDecoder(new ApiErrorDecoder())
+                .requestInterceptor(new AuthInterceptor())
                 .target(RangeClient.class, "https://mysmob.api.connect.skoda-auto.cz");
     }
 }

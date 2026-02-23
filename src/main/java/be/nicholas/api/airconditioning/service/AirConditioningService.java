@@ -14,14 +14,17 @@ public class AirConditioningService {
     private final AirConditioningClientService service;
 
     public AirConditioning getAirConditioning(String vin) {
+        log.info("Get air conditioning for VIN: {}", vin);
         return service.findAirConditioningByVin(vin);
     }
 
     public void startAirConditioning(String vin, AirConditioning airConditioning) {
+        log.info("Starting air conditioning for VIN: {}", vin);
         service.startAirConditioning(vin, airConditioning);
     }
 
     public void stopAirConditioning(String vin) {
+        log.info("Stopping air conditioning for VIN: {}", vin);
         service.stopAirConditioning(vin);
     }
 }

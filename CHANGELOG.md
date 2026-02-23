@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/nicholasM95/api-skoda/compare/v2.0.0...v2.1.0) (2026-02-23)
+
+
+### Features
+
+* start/stop charging, check charging details ([db5ee4c](https://github.com/nicholasM95/api-skoda/commit/db5ee4c7275a5a5ee167de023a380cc696fdb9c9))
+
 # [2.0.0](https://github.com/nicholasM95/api-skoda/compare/v1.6.0...v2.0.0) (2026-02-22)
 
 
